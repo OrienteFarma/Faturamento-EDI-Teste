@@ -1,0 +1,176 @@
+.job-notification {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #2563eb;
+  animation: slideInRight 0.3s ease-out;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.job-notification-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.job-notification-icon {
+  font-size: 1.5rem;
+}
+
+.job-notification-title {
+  flex: 1;
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.938rem;
+}
+
+.job-notification-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.job-notification-close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.job-notification-body {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.job-notification-progress {
+  position: relative;
+  height: 24px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.job-notification-progress-bar {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.3s ease;
+  border-radius: 12px;
+}
+
+.job-notification-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.75rem;
+}
+
+.job-notification-result {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-notification-result p {
+  margin: 0.25rem 0;
+  font-size: 0.813rem;
+  color: #166534;
+}
+
+.job-notification-error {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-notification-error p {
+  margin: 0;
+  font-size: 0.813rem;
+  color: #991b1b;
+}
+
+.job-notification-meta {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Dark Mode */
+body.dark-mode .job-notification {
+  background: #1f2937;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .job-notification-title {
+  color: #f9fafb;
+}
+
+body.dark-mode .job-notification-body {
+  color: #d1d5db;
+}
+
+body.dark-mode .job-notification-close {
+  color: #9ca3af;
+}
+
+body.dark-mode .job-notification-close:hover {
+  background: #374151;
+  color: #f9fafb;
+}
+
+body.dark-mode .job-notification-progress {
+  background: #374151;
+}
+
+body.dark-mode .job-notification-progress-text {
+  color: #f9fafb;
+}
+
+body.dark-mode .job-notification-result {
+  background: #064e3b;
+  border-color: #10b981;
+}
+
+body.dark-mode .job-notification-result p {
+  color: #6ee7b7;
+}
+
+body.dark-mode .job-notification-error {
+  background: #7f1d1d;
+  border-color: #ef4444;
+}
+
+body.dark-mode .job-notification-error p {
+  color: #fca5a5;
+}

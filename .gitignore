@@ -1,0 +1,57 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# Build
+/dist/
+/build/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+backend/.env
+frontend/.env
+
+# Others
+*.local
+*.cache
+
+# React
+frontend/build/
+frontend/node_modules/
+
+# Backend
+backend/node_modules/
+backend/dist/
+backend/build/
+
+# exemplo
+NCFARMATermoDeUso/
+BonificacoesOL/*
+BonificacoesOL/
+
+# Coverage
+coverage/
+
+# IDEs
+.idea/
+*.iml
+
+# Misc
+*.swp
+*.swo
+
+backend/package-lock.json

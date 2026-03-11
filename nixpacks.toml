@@ -1,0 +1,22 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "wkhtmltopdf", "tzdata"]
+
+[phases.install]
+cmds = [
+  "npm install --legacy-peer-deps",
+  "cd backend && npm install --legacy-peer-deps",
+  "cd frontend && npm install --legacy-peer-deps"
+]
+
+[phases.build]
+cmds = [
+  "cd frontend && npm run build"
+]
+
+[start]
+cmd = "cd backend && node src/server.js"
+
+[variables]
+NODE_ENV = "production"
+PORT = "80"
+TZ = "America/Sao_Paulo"

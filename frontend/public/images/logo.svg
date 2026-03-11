@@ -1,0 +1,10 @@
+<!-- Logo Placeholder SVG - Substitua por logo.png real -->
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="80" fill="#0B013F" rx="8"/>
+  <text x="100" y="35" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial, sans-serif" font-weight="bold">
+    ORIENTE
+  </text>
+  <text x="100" y="55" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="Arial, sans-serif" font-weight="bold">
+    FARMA
+  </text>
+</svg>

@@ -1,0 +1,423 @@
+/* ===== DARK MODE OVERRIDES ===== */
+/* Este arquivo contém todos os overrides para dark mode */
+
+/* HomeRelatorio.css - Dark Mode */
+.dark-mode .filters-section h2 {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .filter-group label {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .filter-group input {
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+  background: var(--dark-input-bg);
+}
+
+.dark-mode .filter-group input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.dark-mode .filter-group input:disabled {
+  background: var(--dark-bg-secondary);
+  opacity: 0.5;
+}
+
+.dark-mode .loading-spinner {
+  border-color: var(--dark-border);
+  border-top-color: var(--accent-color);
+}
+
+.dark-mode .loading-container p {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .transportadora-card {
+  background: var(--dark-card-bg);
+  border-color: var(--dark-border);
+}
+
+.dark-mode .transportadora-card:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 24px var(--dark-shadow);
+  background: var(--dark-card-hover);
+}
+
+.dark-mode .circle-bg {
+  stroke: var(--dark-border);
+}
+
+.dark-mode .circle-progress {
+  stroke: var(--accent-color);
+}
+
+.dark-mode .percentage {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .label-text {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .stat-total {
+  border-top-color: var(--dark-border);
+}
+
+.dark-mode .stat-label {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .stat-value {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .empty-state svg {
+  color: var(--dark-border-light);
+}
+
+.dark-mode .empty-state p {
+  color: var(--dark-text-secondary);
+}
+
+/* ModalDetalhesTransportadora.css - Dark Mode */
+.dark-mode .modal-detalhes-overlay {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.dark-mode .modal-detalhes-content {
+  background: var(--dark-card-bg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-mode .modal-detalhes-filters {
+  border-bottom-color: var(--dark-border);
+  background: var(--dark-bg-secondary);
+}
+
+.dark-mode .filter-input {
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+  background: var(--dark-input-bg);
+}
+
+.dark-mode .filter-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.dark-mode .table-pedidos {
+  background: var(--dark-card-bg);
+  box-shadow: 0 1px 3px var(--dark-shadow);
+}
+
+.dark-mode .table-pedidos thead {
+  background: var(--dark-table-header);
+}
+
+.dark-mode .table-pedidos th {
+  color: var(--dark-text-primary);
+  border-bottom-color: var(--dark-border);
+}
+
+.dark-mode .table-pedidos th.sortable:hover {
+  background: var(--dark-hover-bg);
+}
+
+.dark-mode .table-pedidos tbody tr.pedido-row {
+  border-bottom-color: var(--dark-border);
+}
+
+.dark-mode .table-pedidos tbody tr.pedido-row:hover {
+  background: var(--dark-table-row-hover);
+}
+
+.dark-mode .table-pedidos td {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .sort-icon {
+  color: var(--dark-text-muted);
+}
+
+.dark-mode .sort-icon.active {
+  color: var(--accent-color);
+}
+
+.dark-mode .expand-icon {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .pedido-cod {
+  color: var(--accent-color);
+}
+
+.dark-mode .status-em-movimentacao {
+  background: var(--dark-info-bg);
+  color: var(--dark-info-text);
+}
+
+.dark-mode .status-movimentado {
+  background: var(--dark-warning-bg);
+  color: var(--dark-warning-text);
+}
+
+.dark-mode .status-concluido {
+  background: var(--dark-success-bg);
+  color: var(--dark-success-text);
+}
+
+.dark-mode .embarcado {
+  color: var(--dark-success-text);
+}
+
+.dark-mode .pendente {
+  color: var(--dark-error-text);
+}
+
+.dark-mode .pendente-realce {
+  background: var(--dark-error-bg);
+  color: var(--dark-error-text);
+}
+
+.dark-mode .valor {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .volumes-row {
+  background: var(--dark-bg-secondary) !important;
+}
+
+.dark-mode .volumes-header h4 {
+  color: var(--accent-color);
+}
+
+.dark-mode .filter-input-small {
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+  background: var(--dark-input-bg);
+}
+
+.dark-mode .filter-input-small:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.dark-mode .status-filter-button {
+  border-color: var(--dark-border);
+  background: var(--dark-input-bg);
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .status-filter-button:hover {
+  border-color: var(--accent-color);
+  background: var(--dark-hover-bg);
+}
+
+.dark-mode .dropdown-arrow {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .status-filter-button:hover .dropdown-arrow {
+  color: var(--accent-color);
+}
+
+.dark-mode .status-dropdown-menu {
+  background: var(--dark-card-bg);
+  border-color: var(--dark-border);
+  box-shadow: 0 10px 25px var(--dark-shadow);
+}
+
+.dark-mode .status-option {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .status-option:hover {
+  background: var(--dark-hover-bg);
+}
+
+.dark-mode .status-option input[type="checkbox"] {
+  accent-color: var(--accent-color);
+}
+
+.dark-mode .table-volumes {
+  background: var(--dark-bg-tertiary);
+  box-shadow: 0 1px 2px var(--dark-shadow);
+}
+
+.dark-mode .table-volumes thead {
+  background: var(--dark-table-header);
+}
+
+.dark-mode .table-volumes th {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .table-volumes td {
+  border-bottom-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .volume-status.embarcado {
+  background: var(--dark-success-bg);
+  color: var(--dark-success-text);
+}
+
+.dark-mode .volume-status.pendente {
+  background: var(--dark-error-bg);
+  color: var(--dark-error-text);
+}
+
+.dark-mode .empty-results {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .empty-volumes {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .modal-detalhes-body::-webkit-scrollbar-track {
+  background: var(--dark-scrollbar-track);
+}
+
+.dark-mode .modal-detalhes-body::-webkit-scrollbar-thumb {
+  background: var(--dark-scrollbar-thumb);
+}
+
+.dark-mode .modal-detalhes-body::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-border-light);
+}
+
+/* Modal.css - Dark Mode */
+.dark-mode .modal-overlay {
+  background: rgba(11, 1, 63, 0.85);
+}
+
+.dark-mode .modal-content {
+  background: var(--dark-card-bg);
+  box-shadow: 
+    0 20px 60px rgba(11, 1, 63, 0.6),
+    0 0 0 1px var(--dark-border);
+}
+
+.dark-mode .modal-header {
+  border-bottom-color: var(--dark-border);
+}
+
+.dark-mode .modal-header h3 {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .modal-close-btn {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .modal-close-btn:hover {
+  background: var(--dark-hover-bg);
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .modal-info .modal-header {
+  border-bottom-color: var(--dark-border-light);
+}
+
+.dark-mode .modal-success .modal-header {
+  border-bottom-color: var(--dark-border-light);
+}
+
+.dark-mode .modal-success .modal-header h3 {
+  color: var(--dark-success-text);
+}
+
+.dark-mode .modal-error .modal-header {
+  border-bottom-color: var(--dark-border-light);
+}
+
+.dark-mode .modal-error .modal-header h3 {
+  color: var(--dark-error-text);
+}
+
+.dark-mode .modal-warning .modal-header {
+  border-bottom-color: var(--dark-border-light);
+}
+
+.dark-mode .modal-warning .modal-header h3 {
+  color: var(--dark-warning-text);
+}
+
+.dark-mode .modal-content::-webkit-scrollbar-track {
+  background: var(--dark-scrollbar-track);
+}
+
+.dark-mode .modal-content::-webkit-scrollbar-thumb {
+  background: var(--dark-scrollbar-thumb);
+}
+
+.dark-mode .modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-border-light);
+}
+
+/* Login.css - Dark Mode */
+.dark-mode .login-container {
+  background: linear-gradient(135deg, var(--dark-gradient-start) 0%, var(--dark-gradient-end) 50%, #2d0f7a 100%);
+}
+
+.dark-mode .login-card {
+  background: var(--dark-card-bg);
+  box-shadow: 
+    0 20px 60px rgba(11, 1, 63, 0.6),
+    0 0 0 1px var(--dark-border);
+}
+
+.dark-mode .login-header {
+  background: linear-gradient(135deg, var(--dark-gradient-start) 0%, var(--dark-gradient-end) 100%);
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .form-group label {
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .input-icon {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .input-wrapper input {
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+  background: var(--dark-input-bg);
+}
+
+.dark-mode .input-wrapper input::placeholder {
+  color: var(--dark-text-muted);
+}
+
+.dark-mode .input-wrapper input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.dark-mode .input-wrapper input:disabled {
+  background: var(--dark-bg-secondary);
+  opacity: 0.5;
+}
+
+.dark-mode .password-toggle {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .password-toggle:hover:not(:disabled) {
+  background: var(--dark-hover-bg);
+  color: var(--dark-text-primary);
+}
+
+.dark-mode .login-footer {
+  border-top-color: var(--dark-border);
+}
+
+.dark-mode .login-footer p {
+  color: var(--dark-text-secondary);
+}

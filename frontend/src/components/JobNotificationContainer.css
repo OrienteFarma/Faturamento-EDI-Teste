@@ -1,0 +1,43 @@
+.job-notification-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  pointer-events: none;
+}
+
+.job-notification-container > * {
+  pointer-events: auto;
+}
+
+/* Scrollbar customizado */
+.job-notification-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.job-notification-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.job-notification-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.job-notification-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .job-notification-container {
+    top: 60px;
+    right: 10px;
+    left: 10px;
+  }
+}
