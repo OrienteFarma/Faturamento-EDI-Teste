@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: faturamento-edi
-        image: seu-usuario-docker/faturamento-edi:latest # Substitua pela sua imagem Docker
+        image: OrienteInformatica/faturamento-edi:latest # Substitua pela sua imagem Docker
         ports:
         - containerPort: 80
         envFrom:
