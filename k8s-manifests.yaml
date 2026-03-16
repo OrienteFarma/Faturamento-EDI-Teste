@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: faturamento-edi-config
+data:
+  PORT: "80"
+  TZ: "America/Sao_Paulo"
+  CAMINHO_EDI: "/mnt/sankhya/repositorio/Integracao/Faturamento/EDI"
+  CAMINHO_PDF: "/mnt/sankhya/repositorio/Integracao/Faturamento/Romaneio"
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: faturamento-edi-secret
+type: Opaque
+data:
+  # Por favor, substitua os valores abaixo por suas credenciais reais em Base64.
+  # Exemplo: echo -n "seu_valor" | base64
+UE9SVD04MApOT0RFX0VOVj1wcm9kdWN0aW9uCkpXVF9TRUNSRVQ9QXJkZmVqazgudjlSWHM5YWFBVlZ3SmVhWGRLQGtjekNxQzlXTGpmZGd5VUV4QnVHRDhVcEJQKkx5WGVAakFmN1ohZ0R6d19vbnczaFpSSEFEZXRMZSpnYkJYR1dCTHhDZHBWegpBUElfQkFTRV9VUkw9aHR0cHM6Ly9uOG4td2ViaG9vay5vcmllbnRlZmFybWEuY29tLmJyL3dlYmhvb2svZmF0dXJhbWVudG8vcm9tYW5laW9fZWRpCkFQSV9BVVRIX0hFQURFUj1LZWhkTnFILSFrR1JpcWpYYnJXbndnQnJ2ZmZpKlBZZFdXa2dvaTMqc3ZRNlVSNEBYYgpMT0dJTl9BUElfVVJMPWh0dHBzOi8vYXBwLXdlYi1hcGktbG9naW4ueHNoeGVvLmVhc3lwYW5lbC5ob3N0L2F1dGgKTE9HSU5fQVBJX1RPS0VOPWtxVDNyVFQhWUdZSy1vbkhQWGNDR3JvZTNyRDJrVExMY3h0QWFHYS1BYkJCNl9xbjZlCkRCX1NFUlZFUj0xOTIuMTY4LjMuMjMwCkRCX0RBVEFCQVNFPVdNU1JYX01UWgpEQl9VU0VSPXNxbGNvbmVjdGEKREJfUEFTU1dPUkQ9U3EyMkBMMHIxJApEQl9QT1JUPTE0MzMKREJfRU5DUllQVD10cnVlCkRCX1RSVVNUX1NFUlZFUl9DRVJUSUZJQ0FURT10cnVlCkVNQUlMX1VTRVI9ZmF0dXJhbWVudG9Ab3JpZW50ZWZhcm1hLmNvbS5icgpFTUFJTF9QQVNTV09SRD1xb29jIGh5Ym0gbHNnaSB2eXNzCkVNQUlMX0RFU1RJTkFUQVJJTz1hZGFsYmVydG9Ab3JpZW50ZWZhcm1hLmNvbS5icgojIFVzdeFyaW9zIGFkbWluaXN0cmFkb3JlcyAoc2VwYXJhZG9zIHBvciB27XJndWxhKQpBRE1JTl9VU0VSUz1hZGFsYmVydG9zaWx2YSxhbGJlcnRvanVuaW8sdWFybGV5Z29uY2FsdmVzCiMgVXN14XJpb3MgY29tdW5zIChzZXBhcmFkb3MgcG9yIHbtcmd1bGEpCkNPTU1PTl9VU0VSUz12aW5uaWV2aWVpcmEsbHVjYXNyYW1vbmllbCxjcmlzdG9waGVy
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faturamento-edi-deployment
+  labels:
+    app: faturamento-edi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: faturamento-edi
+  template:
+    metadata:
+      labels:
+        app: faturamento-edi
+    spec:
+      containers:
+      - name: faturamento-edi
+        image: seu-usuario-docker/faturamento-edi:latest # Substitua pela sua imagem Docker
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: faturamento-edi-config
+        - secretRef:
+            name: faturamento-edi-secret
+        # Se você for usar PersistentVolume para o compartilhamento SMB,
+        # adicione a configuração de volume aqui e remova o mount-smb.sh do CMD.
+        # volumeMounts:
+        #   - name: smb-volume
+        #     mountPath: /mnt/sankhya
+      # volumes:
+      #   - name: smb-volume
+      #     persistentVolumeClaim:
+      #       claimName: smb-pvc # Substitua pelo nome do seu PersistentVolumeClaim
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: faturamento-edi-service
+  labels:
+    app: faturamento-edi
+spec:
+  selector:
+    app: faturamento-edi
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer # Ou NodePort, dependendo da sua necessidade e ambiente Kubernetes
