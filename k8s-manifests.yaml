@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: faturamento-edi-config
 data:
-  PORT: "80"
+  PORT: "8080"
   TZ: "America/Sao_Paulo"
   CAMINHO_EDI: "/mnt/sankhya/repositorio/Integracao/Faturamento/EDI"
   CAMINHO_PDF: "/mnt/sankhya/repositorio/Integracao/Faturamento/Romaneio"
@@ -71,6 +71,6 @@ spec:
     app: faturamento-edi
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer # Ou NodePort, dependendo da sua necessidade e ambiente Kubernetes
+      port: 8080
+      targetPort: 8080
+  type: NodePort # LoadBalancer Ou NodePort, dependendo da sua necessidade e ambiente Kubernetes
